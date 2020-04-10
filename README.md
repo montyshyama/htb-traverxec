@@ -64,7 +64,7 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 
 And, we are on the box!
 
-# Lateral Movement
+# Privilege Escalation
 
 While on the box, we found 'backup-ssh-identity-files' in the following directory:
 
@@ -98,5 +98,22 @@ john --show id_rsa.hashes
   <img src="screenshots/12.png" width="738">
 </p>
 
-The Passphrase found is ```hunter```
+The Passphrase found is ```hunter```. Lets use this SSH Private Key to login into the machine as User ```david```
+
+<p align="center">
+  <img src="screenshots/13.png" width="738">
+</p>
+
+And,finally the User FLag is retrieved.
+
+<p align="center">
+  <img src="screenshots/14.png" width="738">
+</p>
+
+# Getting a Root Shell
+
+
+
+
+
 
