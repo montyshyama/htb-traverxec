@@ -32,7 +32,7 @@ This version contains Directory Traversal Remote Command Execution Vulnerability
 
 # Initial Foothold
 
-Lets use Metasploit module to exploit this vulnerability.
+Lets use Metasploit module to exploit <a href="https://www.rapid7.com/db/modules/exploit/multi/http/nostromo_code_exec">this</a> vulnerability.
 Start the PostgreSQL database & the Metasploit using this command:
 
 ```
