@@ -109,7 +109,7 @@ ssh -i id_rsa david@10.10.10.165
   <img src="screenshots/13.png" width="738">
 </p>
 
-And,finally the User FLag is retrieved.
+And, finally the User FLag is retrieved.
 
 <p align="center">
   <img src="screenshots/14.png" width="738">
@@ -157,7 +157,7 @@ chmod +x linenum.sh
   <img src="screenshots/17.png" width="738">
 </p>
 
-* There is also a ```server-stats``` script in the directory ```/home/david/bin```
+* There is also a ```server-stats.sh``` script in the directory ```/home/david/bin```
 
 <p align="center">
   <img src="screenshots/18.png" width="738">
