@@ -26,3 +26,10 @@ Port 80 contains a webpage. A usual Directory brute-forcing on the page shows no
 <p align="center">
   <img src="screenshots/4.png" width="738">
 </p>
+
+The Nmap scans also reveals that it is running Nostromo Web Server (Version: 1.9.6). 
+This version contains Directory Traversal Remote Command Execution Vulnerability.
+
+# Foothold
+
+
