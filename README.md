@@ -9,7 +9,12 @@
 Run a Full Nmap Scan to find all the open ports & the services associated with them.
 
 ```
-nmap -sC -sV -p- -oA full-port-scan 10.10.10.160 -vvv
+#!/bin/bash
+echo Grabbing ports...
+ports=$(nmap -p- --min-rate 1000 -T4 $1 | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)  
+echo Ports grabbed!
+echo Scanning...
+nmap -sC -sV -Pn -p $ports $1 $2 $3
 ```
 
 <p align="center">
