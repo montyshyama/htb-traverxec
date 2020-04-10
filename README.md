@@ -98,7 +98,12 @@ john --show id_rsa.hashes
   <img src="screenshots/12.png" width="738">
 </p>
 
-The Passphrase found is ```hunter```. Lets use this SSH Private Key to login into the machine as User ```david```
+The Passphrase found is ```hunter```. Lets use this SSH Private Key to login into the machine as user ```david```
+
+```
+chmod 600 id_rsa
+ssh -i id_rsa david@10.10.10.165
+```
 
 <p align="center">
   <img src="screenshots/13.png" width="738">
