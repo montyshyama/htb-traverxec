@@ -181,7 +181,7 @@ GTFOBins <a href="https://gtfobins.github.io/gtfobins/journalctl/">blog</a> cont
   <img src="screenshots/20.png" width="738">
 </p>
 
-And, we are root!
+* And, we are root!
 
 Finally, the root flag is retrieved.
 
