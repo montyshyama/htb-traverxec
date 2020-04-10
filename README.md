@@ -109,7 +109,7 @@ ssh -i id_rsa david@10.10.10.165
   <img src="screenshots/13.png" width="738">
 </p>
 
-And, finally the user fLag is retrieved.
+And, finally the user flag is retrieved.
 
 <p align="center">
   <img src="screenshots/14.png" width="738">
