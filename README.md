@@ -20,3 +20,9 @@ nmap -sC -sV -Pn -p $ports $1 $2 $3
 <p align="center">
   <img src="screenshots/3.png" width="738">
 </p>
+
+Port 80 contains a webpage. A usual Directory brute-forcing on the page shows nothing interesting to work upon.
+
+<p align="center">
+  <img src="screenshots/4.png" width="738">
+</p>
