@@ -56,7 +56,7 @@ run
   <img src="screenshots/6.png" width="738">
 </p>
 
-Use the following Python one-liner to spawn to a TTY shell.
+Use the following Python one-liner to spawn a TTY shell.
 
 ```
 python -c 'import pty; pty.spawn("/bin/bash")'
@@ -163,7 +163,7 @@ chmod +x linenum.sh
   <img src="screenshots/18.png" width="738">
 </p>
 
-GTFOBins <a href="https://gtfobins.github.io/gtfobins/journalctl/">blog</a> contains a good way to abuse ```journalctl``` for escalating privileges.
+GTFOBins <a href="https://gtfobins.github.io/gtfobins/journalctl/">blog</a> contains a good way to abuse ```journalctl``` (running with ```sudo``` privileges) for escalating privileges.
 
 * Use the following command to start the ```server-stats``` service:
 
